@@ -68,16 +68,17 @@ for(let alquiler of propiedades_alquiler){
         let mostrar="";
         let mascotas="";
      
-        if (alquiler.smoke) {
-
-           let  mostrar= `<li>Permitido fumar "${alquiler.smoke}"</li>`;
-        }
-        
-       
-      if(alquiler.pets){
-        let mascotas= ` <li>Mascotas permitidas</li> "${alquiler.pets}"</li>`;
-
+  
+     let  mostrar= ` <li> Permitido</li> "${alquiler.smoke}"</li>`;
+    } else {
+        let mostrar = ` <li>No permitido</li> "${alquiler.smoke}"</li>`;
     }
+   
+  if(ventas.pets){
+    let mascotas= `<li> permitido "${alquiler.pets}"</li>`;
+     }else {
+    let mostrar = ` <li>No permitido</li> "${alquiler.pets}"</li>`;
+     }
 
     html += `<div id="class="card"> 
     <h1> ${alquiler.Nombre}</h1>
