@@ -66,11 +66,15 @@ for (let ventas of propiedades_venta){
     let mascotas="";
     if (ventas.smoke) {
 
-       let  mostrar= ` <li> permitido</li> "${ventas.smoke}"</li>`;
-    } 
+       let  mostrar= ` <li> Permitido</li> "${ventas.smoke}"</li>`;
+    } else {
+        let mostrar = ` <li>No permitido</li> "${ventas.smoke}"</li>`;
+    }
    
   if(ventas.pets){
     let mascotas= `<li> permitido "${ventas.pets}"</li>`;
+}else {
+    let mostrar = ` <li>No permitido</li> "${ventas.pets}"</li>`;
 }
     
 html += `<div id="${ventas.id} class="card">
